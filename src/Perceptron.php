@@ -29,11 +29,11 @@ class Perceptron
         return $sum > 0 ? 1 : -1;
     }
 
-    public function train($inputs, $desiredOutputs)
+    public function train($inputs, $desiredOutput)
     {
         $guess = $this->feedForward($inputs);
 
-        $error = $desiredOutputs - $guess;
+        $error = $desiredOutput - $guess;
 
         // adjust weight according to error
         for ($i = 0; $i < count($this->weights); $i++) {
